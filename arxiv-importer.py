@@ -20,9 +20,9 @@ keywords = [
 ]
 
 authors = [
-    "Nandkishore",
-    "Lucas",
-    "Scaffidi",
+    '"Rahul Nandkishore"',
+    '"Andrew Lucas"',
+    '"Thomas Scaffidi"',
     ]
 
 def makelist(list):
