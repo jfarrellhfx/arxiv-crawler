@@ -18,5 +18,4 @@ os.system("git add .")
 os.system('git config --global user.name "jfarrellhx"')
 os.system('git config --global user.email "jfarrellhfx@gmail.com"')
 os.system('git commit -m "new day"')
-os.system('git push https://jfarrellhfx:Weasel2089!g@github.com/jfarrellhfx/arxiv-crawler.git main')
-#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
+os.system('git push https://jfarrellhfx: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@github.com/jfarrellhfx/arxiv-crawler.git main')
