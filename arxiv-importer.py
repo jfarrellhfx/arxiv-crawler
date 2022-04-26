@@ -63,8 +63,8 @@ with open("index.html", "w") as f:
     for result in search_authors.results():
         diff = now - result.published
         hrs = diff.total_seconds()/3600
-        
-        # Stop if the 
+
+        # Stop if the
         if hrs > 80:
             break
 
@@ -72,7 +72,7 @@ with open("index.html", "w") as f:
         print(result.published.date())
         print("")
 
-        
+
         f.write("<body>\n")
         f.write("<h3>{}</h3>\n".format(result.title))
         f.write("<a href = \"{}\">{}</a>\n<br>\n".format(result.links[0], result.links[0]))
@@ -96,8 +96,8 @@ with open("index.html", "w") as f:
     for result in search_keywords.results():
         diff = now - result.published
         hrs = diff.total_seconds()/3600
-        
-        # Stop if the 
+
+        # Stop if the
         if hrs > 82:
             break
 
@@ -105,7 +105,7 @@ with open("index.html", "w") as f:
         print(result.published.date())
         print("")
 
-        
+
         f.write("<body>\n")
         f.write("<h3>{}</h3>\n".format(result.title))
         f.write("<a href = \"{}\">{}</a>\n<br>\n".format(result.links[0], result.links[0]))
@@ -125,8 +125,8 @@ with open("index.html", "w") as f:
         f.write("<br>\n")
         f.write("<br>\n")
         f.write("<br>\n")
-        
+
         f.write("</body>")
 
-   
-    
+
+
