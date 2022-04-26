@@ -52,7 +52,7 @@ search_keywords = arxiv.Search(
 now = datetime.now(timezone.utc)
 
 papers = []
-with open("test.html", "w") as f:
+with open("index.html", "w") as f:
 
     with open("head.html","r") as g:
         for line in g.readlines():
@@ -98,7 +98,7 @@ with open("test.html", "w") as f:
         hrs = diff.total_seconds()/3600
         
         # Stop if the 
-        if hrs > 80:
+        if hrs > 82:
             break
 
         print(result.title)
