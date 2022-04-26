@@ -23,12 +23,16 @@ authors = [
     '"Rahul Nandkishore"',
     '"Andrew Lucas"',
     '"Thomas Scaffidi"',
+    "'Paolo Glorioso'",
+    "'Sean Hartnoll'"
     ]
 
 def makelist(list):
     query = ""
     for item in list:
-        query = query+ " " + item
+        query = query+ " OR " + item
+        
+    query = query[3:]
     return query
 
 
