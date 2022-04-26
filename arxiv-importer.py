@@ -23,8 +23,8 @@ authors = [
     '"Rahul Nandkishore"',
     '"Andrew Lucas"',
     '"Thomas Scaffidi"',
-    "'Paolo Glorioso'",
-    "'Sean Hartnoll'"
+    '"Paolo Glorioso"',
+    '"Sean Hartnoll"'
     ]
 
 def makelist(list):
