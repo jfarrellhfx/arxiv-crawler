@@ -15,5 +15,9 @@ os.system("python arxiv-importer.py")
 
 # update the website
 os.system("git add .")
+os.system('git config --global user.name "jfarrellhx"')
+os.system('git config --global user.email "jfarrellhfx@gmail.com"')
 os.system('git commit -m "new day"')
 os.system('git push origin main')
+os.system("jfarrellhfx")
+os.system("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")
