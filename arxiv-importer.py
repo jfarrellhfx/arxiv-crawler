@@ -15,9 +15,10 @@ categories = [
 
 keywords = [
     'hydrodynamic',
+    'hydrodynamics',
     '"effective field theory"',
-    'kinetic theory',
-    'quasiparticle'
+    '"kinetic theory"',
+    '"active matter"'
 ]
 
 authors = [
