@@ -17,6 +17,7 @@ keywords = [
     'hydrodynamic',
     '"effective field theory"',
     'kinetic theory',
+    'quasiparticle'
 ]
 
 authors = [
@@ -31,7 +32,7 @@ def makelist(list):
     query = ""
     for item in list:
         query = query+ " OR " + item
-        
+
     query = query[3:]
     return query
 
@@ -69,7 +70,7 @@ with open("index.html", "w") as f:
         hrs = diff.total_seconds()/3600
 
         # Stop if the
-        if hrs > 80:
+        if hrs > 24:
             break
 
         print(result.title)
