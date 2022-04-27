@@ -18,7 +18,8 @@ keywords = [
     'hydrodynamics',
     '"effective field theory"',
     '"kinetic theory"',
-    '"active matter"'
+    '"active matter"',
+    'quasiparticle'
 ]
 
 authors = [
@@ -44,6 +45,7 @@ search_authors = arxiv.Search(
         makelist(authors)
     ),
     sort_by=arxiv.SortCriterion.SubmittedDate
+
     )
 
 search_keywords = arxiv.Search(
