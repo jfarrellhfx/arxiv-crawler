@@ -71,7 +71,7 @@ with open("index.html", "w") as f:
         hrs = diff.total_seconds()/3600
 
         # Stop if the
-        if hrs > 150:
+        if hrs > 200:
             break
 
         print(result.title)
