@@ -19,7 +19,7 @@ keywords = [
     '"effective field theory"',
     '"kinetic theory"',
     '"active matter"',
-    'quasiparticle'
+    "quasiparticle"
 ]
 
 authors = [
@@ -33,9 +33,10 @@ authors = [
 def makelist(list):
     query = ""
     for item in list:
-        query = query+ " OR " + item
+        query = query + " OR " + item
 
     query = query[3:]
+    print(query)
     return query
 
 
@@ -45,7 +46,6 @@ search_authors = arxiv.Search(
         makelist(authors)
     ),
     sort_by=arxiv.SortCriterion.SubmittedDate
-
     )
 
 search_keywords = arxiv.Search(
@@ -53,7 +53,7 @@ search_keywords = arxiv.Search(
         makelist(categories),
         makelist(keywords)
     ),
-    sort_by=arxiv.SortCriterion.SubmittedDate
+    sort_by=arxiv.SortCriterion.SubmittedDate,
     )
 
 
@@ -73,7 +73,7 @@ with open("index.html", "w") as f:
         hrs = diff.total_seconds()/3600
 
         # Stop if the
-        if hrs > 200:
+        if hrs > 24:
             break
 
         print(result.title)
