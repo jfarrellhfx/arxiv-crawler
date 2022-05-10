@@ -32,7 +32,7 @@ with open("Archive.html", "w") as f:
             f.write('<a href = "{}">{}</a>\n'.format(name, name2))
             f.write("<br>\n")
     f.write("</body>")
-        
+
 
 # create the new list of papers
 os.system("python arxiv-importer.py")
