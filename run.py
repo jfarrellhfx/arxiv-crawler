@@ -3,6 +3,10 @@ import os
 from datetime import datetime, timedelta
 from time import sleep
 
+# read the token--- but it's in a gitignore, ha!
+with open('token.txt', 'r') as f:
+    token = f.readlines()[0]
+
 # today and yesterday's date as strings
 today = str(datetime.now().date())
 yesterday = datetime.now() - timedelta(hours = 24)
@@ -44,4 +48,4 @@ os.system("git add .")
 os.system('git config --global user.name "jfarrellhx"')
 os.system('git config --global user.email "jfarrellhfx@gmail.com"')
 os.system('git commit -m "new day"')
-os.system('git push https://jfarrellhfx:{}@github.com/jfarrellhfx/arxiv-crawler.git main'.format(token1 + token2))
+os.system('git push https://jfarrellhfx:{}@github.com/jfarrellhfx/arxiv-crawler.git main'.format(token))
