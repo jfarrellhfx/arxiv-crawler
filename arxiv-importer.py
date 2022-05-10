@@ -27,8 +27,8 @@ keywords = [
     'hydrodynamic',
     'hydrodynamics',
     '"effective field theory"',
-    'kinetic theory',
-    'active matter'
+    '"kinetic theory"',
+    '"active matter"'
 ]
 
 authors = [
