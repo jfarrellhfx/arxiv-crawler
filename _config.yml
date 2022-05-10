@@ -34,6 +34,9 @@ minima:
     skin: dark
 plugins:
   - jekyll-feed
+header-pages:
+  - Archive
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
