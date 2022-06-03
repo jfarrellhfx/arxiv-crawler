@@ -38,6 +38,7 @@ authors = [
     '"Thomas Scaffidi"',
     '"Paolo Glorioso"',
     '"Sean Hartnoll"',
+    '"Ananth Kandala"'
     ]
 
 # keep track of whether there are any results
