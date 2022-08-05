@@ -92,7 +92,7 @@ with open("index.html", "w") as f:
         # figure out how long it's been since the result was published, and break the loop if this time is greater than 24 hrs.
         diff = now - result.published
         hrs = diff.total_seconds()/3600
-        if hrs > 24:
+        if hrs > 30 * 24:
             break
         
         # format everyhthing nicely with links
