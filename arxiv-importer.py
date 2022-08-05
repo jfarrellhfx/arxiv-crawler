@@ -28,7 +28,8 @@ keywords = [
     'hydrodynamics',
     '"effective field theory"',
     '"kinetic theory"',
-    '"active matter"'
+    '"active matter"',
+    'active'
 ]
 
 authors = [
@@ -37,6 +38,7 @@ authors = [
     '"Thomas Scaffidi"',
     '"Paolo Glorioso"',
     '"Sean Hartnoll"',
+    '"Ananth Kandala"'
     ]
 
 # keep track of whether there are any results
@@ -47,7 +49,7 @@ def makelist(list):
     query = ""
     for item in list:
         query = query+ " OR " + item
-        
+
     query = query[3:]
     print(query)
     return query
@@ -94,7 +96,7 @@ with open("index.html", "w") as f:
         hrs = diff.total_seconds()/3600
         if hrs > 30 * 24:
             break
-        
+
         # format everyhthing nicely with links
         print(result.title)
         print(result.published.date())
@@ -121,7 +123,7 @@ with open("index.html", "w") as f:
         f.write("<br>\n")
 
     # Keywords ------------------------------------------------------------------
-    # ditto everything from the authors... 
+    # ditto everything from the authors...
     f.write("<h2>Keywords:</h2>\n")
     for result in search_keywords.results():
         diff = now - result.published

@@ -26,7 +26,7 @@ with open("Archive.html", "w") as f:
             f.write(line + "\n")
 
     # for every filename that starts with a sensible date in the 21st century, add a link to the corresponding page in the arxiv file.
-    for name in os.listdir(".")[::-1]:
+    for name in sorted(os.listdir("."))[::-1]:
         if name[0] == "2":
             name2 = name[:10]
             f.write('<a href = "{}">{}</a>\n'.format(name, name2))
