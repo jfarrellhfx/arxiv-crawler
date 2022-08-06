@@ -44,6 +44,10 @@ authors = [
 # keep track of whether there are any results
 good_results = 0
 
+# period
+period = 72
+
+
 # helper function: given a list of keywords, put them into a long string separated by "OR" to use in the Arxiv API.
 def makelist(list):
     query = ""
@@ -102,7 +106,7 @@ with open("index.html", "w") as f:
         # figure out how long it's been since the result was published, and break the loop if this time is greater than 24 hrs.
         diff = now - result.published
         hrs = diff.total_seconds()/3600
-        if hrs > 30 * 24:
+        if hrs > period:
             break
 
         # format everyhthing nicely with links
@@ -138,7 +142,7 @@ with open("index.html", "w") as f:
         hrs = diff.total_seconds()/3600
 
         # Stop if the
-        if hrs > 24:
+        if hrs > period:
             break
 
         print(result.title)
@@ -170,7 +174,7 @@ with open("index.html", "w") as f:
         hrs = diff.total_seconds()/3600
 
         # Stop if the
-        if hrs > 48:
+        if hrs > period:
             break
 
         print(result.title)
