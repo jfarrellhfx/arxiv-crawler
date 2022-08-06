@@ -145,9 +145,6 @@ with open("index.html", "w") as f:
         print(result.published.date())
         print("")
         good_results += 1
-
-
-        f.write("<body>\n")
         f.write("<h3>{}</h3>\n".format(result.title))
         f.write("<a href = \"{}\">{}</a>\n<br>\n".format(result.links[0], result.links[0]))
 
@@ -167,11 +164,10 @@ with open("index.html", "w") as f:
         f.write("<br>\n")
         f.write("<br>\n")
 
-        f.write("</body>")
 
 
         f.write("<h2>All Papers:</h2>\n")
-    for result in search_keywords.results():
+    for result in all.results():
         diff = now - result.published
         hrs = diff.total_seconds()/3600
 
@@ -184,8 +180,6 @@ with open("index.html", "w") as f:
         print("")
         good_results += 1
 
-
-        f.write("<body>\n")
         f.write("<h3>{}</h3>\n".format(result.title))
         f.write("<a href = \"{}\">{}</a>\n<br>\n".format(result.links[0], result.links[0]))
 
