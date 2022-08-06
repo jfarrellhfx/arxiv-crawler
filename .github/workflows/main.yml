@@ -11,5 +11,8 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.8 #install the python needed
+      - name: install archive package
+        run: pip install arxiv
+          
       - name: execute py script # run the run.py to get the latest data
         run: python run.py
