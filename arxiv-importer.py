@@ -166,13 +166,13 @@ with open("index.html", "w") as f:
 
 
 
-        f.write("<h2>All Papers:</h2>\n")
+    f.write("<h2>All Papers:</h2>\n")
     for result in search_all.results():
         diff = now - result.published
         hrs = diff.total_seconds()/3600
 
         # Stop if the
-        if hrs > 24:
+        if hrs > 48:
             break
 
         print(result.title)
