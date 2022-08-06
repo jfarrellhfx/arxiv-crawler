@@ -3,10 +3,6 @@ import os
 from datetime import datetime, timedelta
 from time import sleep
 
-# read the token--- but it's in a gitignore, ha!
-with open('token.txt', 'r') as f:
-    token = f.readlines()[0]
-
 # today and yesterday's date as strings
 today = str(datetime.now().date())
 yesterday = datetime.now() - timedelta(hours = 24)
