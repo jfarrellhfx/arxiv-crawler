@@ -65,7 +65,7 @@ search_authors = arxiv.Search(
 
 search_all = arxiv.Search(
     query = "cat:({})".format(
-        makelist(categories),
+        makelist(categories)
     ),
     sort_by=arxiv.SortCriterion.SubmittedDate
     )
