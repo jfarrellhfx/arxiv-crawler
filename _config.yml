@@ -36,6 +36,8 @@ plugins:
   - jekyll-feed
 header-pages:
   - Archive
+include:
+  - archive
 
 
 # Exclude from processing.

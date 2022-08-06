@@ -63,6 +63,14 @@ search_authors = arxiv.Search(
     sort_by=arxiv.SortCriterion.SubmittedDate
     )
 
+search_all = arxiv.Search(
+    query = "cat:({})".format(
+        makelist(categories),
+    ),
+    sort_by=arxiv.SortCriterion.SubmittedDate
+    )
+
+
 # arxiv for category and keywords
 search_keywords = arxiv.Search(
     query = "cat:({}) AND (all:({}))".format(
@@ -125,6 +133,44 @@ with open("index.html", "w") as f:
     # Keywords ------------------------------------------------------------------
     # ditto everything from the authors...
     f.write("<h2>Keywords:</h2>\n")
+    for result in search_keywords.results():
+        diff = now - result.published
+        hrs = diff.total_seconds()/3600
+
+        # Stop if the
+        if hrs > 24:
+            break
+
+        print(result.title)
+        print(result.published.date())
+        print("")
+        good_results += 1
+
+
+        f.write("<body>\n")
+        f.write("<h3>{}</h3>\n".format(result.title))
+        f.write("<a href = \"{}\">{}</a>\n<br>\n".format(result.links[0], result.links[0]))
+
+        authors = ""
+        for author in result.authors:
+            name = author.name
+            authors = authors + ", " + name.encode("ascii", errors = "ignore").decode()
+            if authors[0] == ",":
+                authors = authors[2:]
+
+        f.write("<i>{}</i>\n".format(authors))
+        f.write("<br>\n")
+        f.write("<br>\n")
+        f.write("{}\n".format(result.summary))
+        f.write("<br>\n")
+        f.write("<br>\n")
+        f.write("<br>\n")
+        f.write("<br>\n")
+
+        f.write("</body>")
+
+
+        f.write("<h2>All Papers:</h2>\n")
     for result in search_keywords.results():
         diff = now - result.published
         hrs = diff.total_seconds()/3600
