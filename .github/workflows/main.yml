@@ -16,3 +16,11 @@ jobs:
           
       - name: execute py script # run the run.py to get the latest data
         run: python run.py
+      - name: git stuff
+        run: |
+          git config --global user.name "jfarrellhfx"
+          git config --global user.email "jfarrellhfx@gmail.com"
+
+          git add .
+          git commit -m "new day"
+          git push
