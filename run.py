@@ -32,8 +32,3 @@ with open("Archive.html", "w") as f:
 
 # create the new list of papers
 os.system("python arxiv-importer.py")
-
-# update the website
-os.system("git add .")
-os.system('git commit -m "new day"')
-os.system('git push origin main')
