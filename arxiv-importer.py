@@ -161,8 +161,6 @@ with open("index.html", "w") as f:
         f.write("{}\n".format(result.summary))
         f.write("<br>\n")
         f.write("<br>\n")
-        f.write("<br>\n")
-        f.write("<br>\n")
 
 
 
@@ -194,8 +192,6 @@ with open("index.html", "w") as f:
         f.write("<br>\n")
         f.write("<br>\n")
         f.write("{}\n".format(result.summary))
-        f.write("<br>\n")
-        f.write("<br>\n")
         f.write("<br>\n")
         f.write("<br>\n")
 
