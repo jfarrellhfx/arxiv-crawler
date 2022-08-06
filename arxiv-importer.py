@@ -45,7 +45,7 @@ authors = [
 good_results = 0
 
 # period
-period = 72
+period = 24
 
 
 # helper function: given a list of keywords, put them into a long string separated by "OR" to use in the Arxiv API.
