@@ -146,7 +146,7 @@ with open("index.html", "w", encoding="utf-8") as f:
     # add the header, which is stored in a different file
     with open("head.html","r") as g:
             for line in g.readlines():
-                f.write(line + "\r")
+                f.write(line)
     f.write("<body>\n")
 
 

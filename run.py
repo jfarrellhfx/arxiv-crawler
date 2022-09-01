@@ -31,6 +31,7 @@ if datetime.now(timezone(timedelta(hours=-5), 'EST')).weekday() in [0,1,2,3,6]:
                 f.write(line)
 
         # for every filename that starts with a sensible date in the 21st century, add a link to the corresponding page in the arxiv file.
+        f.write("<body>")
         for name in sorted(os.listdir("archive"))[::-1]:
             if name[0] == "2":
                 name2 = name[:10]
