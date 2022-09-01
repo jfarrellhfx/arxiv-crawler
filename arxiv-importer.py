@@ -164,7 +164,7 @@ with open("index.html", "w") as f:
             print(result.title)
             
             f.write("<h3>{}</h3>\n".format(result.title))
-            f.write("<a href = \"{}\",target=\"_blank\">{}</a>\n<br>\n".format(result.links[0], result.links[0]))
+            f.write("<a href = \"{}\" target = \"_blank\">{}</a>\n<br>\n".format(result.links[0], result.links[0]))
 
             authors = ""
             for author in result.authors:
@@ -191,7 +191,7 @@ with open("index.html", "w") as f:
             print(result.published)
             print("")
             f.write("<h3>{}</h3>\n".format(result.title))
-            f.write("<a href = \"{}\",target=\"_blank\">{}</a>\n<br>\n".format(result.links[0], result.links[0]))
+            f.write("<a href = \"{}\" target = \"_blank\">{}</a>\n<br>\n".format(result.links[0], result.links[0]))
 
             authors = ""
             for author in result.authors:
@@ -219,7 +219,7 @@ with open("index.html", "w") as f:
 
 
             f.write("<h3>{}</h3>\n".format(result.title))
-            f.write("<a href = \"{}\",target=\"_blank\">{}</a>\n<br>\n".format(result.links[0], result.links[0]))
+            f.write("<a href = \"{}\" target = \"_blank\">{}</a>\n<br>\n".format(result.links[0], result.links[0]))
 
             authors = ""
             for author in result.authors:
