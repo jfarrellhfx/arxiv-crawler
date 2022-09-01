@@ -27,6 +27,7 @@ if datetime.now(timezone(timedelta(hours=-5), 'EST')).weekday() in [0,1,2,3,6]:
 
         # add the header
         with open("head.html","r") as g:
+            f.write("---\nlayout: page\n---")
             for line in g.readlines():
                 f.write(line +"\n")
 
@@ -37,7 +38,6 @@ if datetime.now(timezone(timedelta(hours=-5), 'EST')).weekday() in [0,1,2,3,6]:
                 f.write('<a href = "archive/{}">{}</a>\n'.format(name, name2))
                 f.write("<br>\n")
         f.write("</body>")
-
 
     # create the new list of papers
     os.system("python arxiv-importer.py")

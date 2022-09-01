@@ -61,13 +61,15 @@ search_authors = arxiv.Search(
         makelist(categories),
         makelist(authors)
     ),
-    sort_by=arxiv.SortCriterion.SubmittedDate,
+    max_results=float('inf'),
+    sort_by=arxiv.SortCriterion.SubmittedDate
     )
 
 search_all = arxiv.Search(
     query = "cat:({})".format(
         makelist(categories)
     ),
+    max_results=float('inf'),
     sort_by=arxiv.SortCriterion.SubmittedDate
     )
 
@@ -78,7 +80,8 @@ search_keywords = arxiv.Search(
         makelist(categories),
         makelist(keywords)
     ),
-    sort_by=arxiv.SortCriterion.SubmittedDate,
+    max_results=float('inf'),
+    sort_by=arxiv.SortCriterion.SubmittedDate
     )
 
 
@@ -141,9 +144,10 @@ with open("index.html", "w") as f:
 
     # add the header, which is stored in a different file
     with open("head.html","r") as g:
-        for line in g.readlines():
-            f.write(line + "\n")
-        f.write("<body>\n")
+            f.write("---\nlayout: page\n---")
+            for line in g.readlines():
+                f.write(line +"\n")
+    f.write("<body>\n")
 
 
    
