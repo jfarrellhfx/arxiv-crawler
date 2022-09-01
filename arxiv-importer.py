@@ -20,7 +20,8 @@ categories = [
     "cond-mat.mes-hall",
     "cond-mat.str-el",
     "cond-mat.stat-mech",
-    "cond-mat.supr-con"
+    "cond-mat.supr-con",
+    "cond-mat.quant-gas"
 ]
 
 keywords = [
@@ -144,7 +145,7 @@ with open("index.html", "w") as f:
 
     # add the header, which is stored in a different file
     with open("head.html","r") as g:
-            f.write("---\nlayout: page\n---")
+            f.write("---\nlayout: page\n---\n")
             for line in g.readlines():
                 f.write(line +"\n")
     f.write("<body>\n")

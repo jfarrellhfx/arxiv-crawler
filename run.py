@@ -27,7 +27,7 @@ if datetime.now(timezone(timedelta(hours=-5), 'EST')).weekday() in [0,1,2,3,6]:
 
         # add the header
         with open("head.html","r") as g:
-            f.write("---\nlayout: page\n---")
+            f.write("---\nlayout: page\n---\n")
             for line in g.readlines():
                 f.write(line +"\n")
 
