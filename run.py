@@ -23,13 +23,12 @@ if datetime.now(timezone(timedelta(hours=-5), 'EST')).weekday() in [0,1,2,3,6]:
     sleep(1) # wait a second
 
     # Open an html file to hold links to all the old results.
-    with open("Archive.html", "w") as f:
+    with open("Archive.html", "w", encoding = "utf-8") as f:
 
         # add the header
         with open("head.html","r") as g:
-            f.write("---\nlayout: page\n---\n")
             for line in g.readlines():
-                f.write(line +"\n")
+                f.write(line)
 
         # for every filename that starts with a sensible date in the 21st century, add a link to the corresponding page in the arxiv file.
         for name in sorted(os.listdir("archive"))[::-1]:
@@ -38,6 +37,7 @@ if datetime.now(timezone(timedelta(hours=-5), 'EST')).weekday() in [0,1,2,3,6]:
                 f.write('<a href = "archive/{}">{}</a>\n'.format(name, name2))
                 f.write("<br>\n")
         f.write("</body>")
+    sleep(1)
 
     # create the new list of papers
     os.system("python arxiv-importer.py")
