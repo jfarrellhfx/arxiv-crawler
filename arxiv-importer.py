@@ -11,6 +11,7 @@ import os
 from datetime import datetime, timezone, timedelta
 import logging
 import string
+import codecs
 
 # Set up logging for console output
 logging.basicConfig(level=logging.INFO)
@@ -20,8 +21,7 @@ categories = [
     "cond-mat.mes-hall",
     "cond-mat.str-el",
     "cond-mat.stat-mech",
-    "cond-mat.supr-con",
-    "cond-mat.quant-gas"
+    "cond-mat.supr-con"
 ]
 
 keywords = [
@@ -107,7 +107,7 @@ def good_results(allresults):
             print("")
             diff = now_utc- result.published
             hrs = diff.total_seconds() / 3600
-            if hrs > 2 and hrs < 30:
+            if hrs >= 2 and hrs <= 30:
                 goodresults.append(result)
                  
             if hrs > 100:
@@ -118,7 +118,7 @@ def good_results(allresults):
         for result in allresults:
             diff = now_utc- result.published
             hrs = diff.total_seconds() / 3600
-            if hrs > 50 and hrs < 78:
+            if hrs >= 50 and hrs <= 78:
                 goodresults.append(result)
             if hrs > 100:
                 break
@@ -128,9 +128,9 @@ def good_results(allresults):
             diff = now_utc- result.published
           
             hrs = diff.total_seconds() / 3600
-            if hrs > 2 and hrs < 78:
+            if hrs >= 2 and hrs <= 78:
                 goodresults.append(result)
-            if hrs > 100:
+            if hrs >= 100:
                 break
     return goodresults
 
@@ -141,13 +141,12 @@ def good_results(allresults):
 
 
 # create a html file to which to put the results
-with open("index.html", "w") as f:
+with open("index.html", "w", encoding="utf-8") as f:
 
     # add the header, which is stored in a different file
     with open("head.html","r") as g:
-            f.write("---\nlayout: page\n---\n")
             for line in g.readlines():
-                f.write(line +"\n")
+                f.write(line + "\r")
     f.write("<body>\n")
 
 
