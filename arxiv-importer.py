@@ -61,7 +61,7 @@ search_authors = arxiv.Search(
         makelist(categories),
         makelist(authors)
     ),
-    sort_by=arxiv.SortCriterion.SubmittedDate
+    sort_by=arxiv.SortCriterion.SubmittedDate,
     )
 
 search_all = arxiv.Search(
@@ -86,6 +86,7 @@ search_keywords = arxiv.Search(
 
 # the time
 now_utc = datetime.now(timezone.utc)
+#now_utc = datetime(year=2022,month=8,day=31,hour=22,minute = 5).replace(tzinfo=timezone.utc)
 now_est = now_utc - timedelta(hours = 4)
 print("time")
 
