@@ -70,8 +70,9 @@ search_all = arxiv.Search(
     query = "cat:({})".format(
         makelist(categories)
     ),
-    max_results=float('inf'),
-    sort_by=arxiv.SortCriterion.SubmittedDate
+    
+    sort_by=arxiv.SortCriterion.SubmittedDate.
+    max_results=float('inf')
     )
 
 
@@ -89,10 +90,11 @@ search_keywords = arxiv.Search(
 
 
 # the time
-now_utc = datetime.now(timezone.utc)
-#now_utc = datetime(year=2022,month=8,day=31,hour=22,minute = 5).replace(tzinfo=timezone.utc)
+#now_utc = datetime.now(timezone.utc)
+now_utc = datetime(year=2022,month=9,day=2,hour=0,minute = 0).replace(tzinfo=timezone.utc)
+print(now_utc)
 now_est = now_utc - timedelta(hours = 4)
-print("time")
+print(now_est.weekday())
 
 
 def good_results(allresults):
@@ -103,10 +105,11 @@ def good_results(allresults):
         print("weekday")
        
         for result in allresults:
-            print(result.published.tzinfo)
-            print("")
+            #print(result.title)
             diff = now_utc- result.published
+            
             hrs = diff.total_seconds() / 3600
+            print(hrs)
             if hrs >= 2 and hrs <= 30:
                 goodresults.append(result)
                  
