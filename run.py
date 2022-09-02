@@ -4,7 +4,7 @@ from datetime import datetime, timedelta, timezone
 from time import sleep
 
 # today and yesterday's date as strings
-yesterday = datetime.now(timezone.utc) - timedelta(hours = 28)
+yesterday = datetime.now(timezone.utc) - timedelta(hours = 24)
 yesterday = str(yesterday.date())
 
 
