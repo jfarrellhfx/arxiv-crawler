@@ -1,7 +1,7 @@
 name: py
 on:
   schedule:
-    - cron: "5 22 * * *"
+    - cron: "6 5 * * *"
 
 jobs:
   build:
@@ -13,8 +13,10 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.8 #install the python needed
-      - name: install archive package
-        run: pip install arxiv
+      - name: install crawling package
+        run: pip install bs4
+      - name: install requests package
+        run: pip install requests
           
       - name: execute py script # run the run.py to get the latest data
         run: python run.py
