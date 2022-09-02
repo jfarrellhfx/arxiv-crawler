@@ -1,7 +1,7 @@
 name: py
 on:
   schedule:
-    - cron: "6 5 * * *"
+    - cron: "9 4 * * *"
 
 jobs:
   build:
