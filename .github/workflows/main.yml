@@ -1,8 +1,6 @@
 name: py
-on:
-  schedule:
-    - cron: "9 4 * * *"
-
+on: workflow_dispatch
+  
 jobs:
   build:
     runs-on: ubuntu-latest
