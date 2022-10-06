@@ -70,7 +70,6 @@ search_all = arxiv.Search(
     query = "cat:({})".format(
         makelist(categories)
     ),
-    
     sort_by=arxiv.SortCriterion.SubmittedDate.
     max_results=float('inf')
     )

@@ -32,11 +32,11 @@ keywords = [
 ]
 
 authors = [
-    '"Rahul Nandkishore"',
-    '"Andrew Lucas"',
-    '"Thomas Scaffidi"',
-    '"Paolo Glorioso"',
-    '"Sean Hartnoll"'
+    "Rahul Nandkishore",
+    "Andrew Lucas",
+    "Thomas Scaffidi",
+    "Paolo Glorioso",
+    "Sean Hartnoll",
     ]
 
 
