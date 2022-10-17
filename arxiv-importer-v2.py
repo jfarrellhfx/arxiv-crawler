@@ -98,6 +98,7 @@ with open("index.html", "w", encoding="utf-8") as f:
 
             f.write("<h3>{}</h3>\n".format(result.title))
             f.write("<a href = \"{}\" target = \"_blank\">{}</a>\n<br>\n".format(result.url, result.url))
+            f.write("<br>\n")
 
             authors_ = ""
             for author in result.authors:
@@ -122,7 +123,7 @@ with open("index.html", "w", encoding="utf-8") as f:
 
             f.write("<h3>{}</h3>\n".format(result.title))
             f.write("<a href = \"{}\" target = \"_blank\">{}</a>\n<br>\n".format(result.url, result.url))
-
+            f.write("<br>\n")
             authors_ = ""
             for author in result.authors:
                 authors_ = authors_ + ", " + author
@@ -146,7 +147,7 @@ with open("index.html", "w", encoding="utf-8") as f:
 
             f.write("<h3>{}</h3>\n".format(result.title))
             f.write("<a href = \"{}\" target = \"_blank\">{}</a>\n<br>\n".format(result.url, result.url))
-
+            f.write("<br>\n")
             authors_ = ""
             for author in result.authors:
                 authors_ = authors_ + ", " + author
