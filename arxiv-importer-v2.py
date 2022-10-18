@@ -90,6 +90,7 @@ with open("index.html", "w", encoding="utf-8") as f:
     f.write("<body>\n")
     try:
         f.write("<h2>Authors:</h2>\n")
+        f.write("<hr color = \"#bbb\">\n")
         for result in search_authors:
             
             print(result.title)
@@ -98,7 +99,6 @@ with open("index.html", "w", encoding="utf-8") as f:
 
             f.write("<h3>{}</h3>\n".format(result.title))
             f.write("<a href = \"{}\" target = \"_blank\">{}</a>\n<br>\n".format(result.url, result.url))
-            f.write("<br>\n")
 
             authors_ = ""
             for author in result.authors:
@@ -107,6 +107,7 @@ with open("index.html", "w", encoding="utf-8") as f:
                     authors_ = authors_[2:]
 
             f.write("<i>{}</i>\n".format(authors_))
+            f.write("<br>\n")
             f.write("<br>\n")
 
             f.write("{}\n".format(result.abstract))
@@ -115,6 +116,7 @@ with open("index.html", "w", encoding="utf-8") as f:
     except: pass
     try:
         f.write("<h2>Keywords:</h2>\n")
+        f.write("<hr color = \"#bbb\">\n")
         for result in search_keywords:
             
             print(result.title)
@@ -123,7 +125,6 @@ with open("index.html", "w", encoding="utf-8") as f:
 
             f.write("<h3>{}</h3>\n".format(result.title))
             f.write("<a href = \"{}\" target = \"_blank\">{}</a>\n<br>\n".format(result.url, result.url))
-            f.write("<br>\n")
             authors_ = ""
             for author in result.authors:
                 authors_ = authors_ + ", " + author
@@ -131,6 +132,7 @@ with open("index.html", "w", encoding="utf-8") as f:
                     authors_ = authors_[2:]
 
             f.write("<i>{}</i>\n".format(authors_))
+            f.write("<br>\n")
             f.write("<br>\n")
 
             f.write("{}\n".format(result.abstract))
@@ -139,6 +141,7 @@ with open("index.html", "w", encoding="utf-8") as f:
     except: pass
     try:
         f.write("<h2>All Papers:</h2>\n")
+        f.write("<hr color = \"#bbb\">\n")
         for result in search_all:
             
             print(result.title)
@@ -147,7 +150,6 @@ with open("index.html", "w", encoding="utf-8") as f:
 
             f.write("<h3>{}</h3>\n".format(result.title))
             f.write("<a href = \"{}\" target = \"_blank\">{}</a>\n<br>\n".format(result.url, result.url))
-            f.write("<br>\n")
             authors_ = ""
             for author in result.authors:
                 authors_ = authors_ + ", " + author
@@ -155,6 +157,7 @@ with open("index.html", "w", encoding="utf-8") as f:
                     authors_ = authors_[2:]
 
             f.write("<i>{}</i>\n".format(authors_))
+            f.write("<br>\n")
             f.write("<br>\n")
 
             f.write("{}\n".format(result.abstract))
