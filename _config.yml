@@ -56,7 +56,7 @@ excerpt_length: 50
 
 
 navbar-links:
-  Archive: Archive
+  Archive: arxiv-crawler/Archive
 navbar-var-length: true
     
 

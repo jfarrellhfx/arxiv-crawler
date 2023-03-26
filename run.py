@@ -28,7 +28,7 @@ with open("Archive.html", "w", encoding = "utf-8") as f:
     for name in sorted(os.listdir("archive"))[::-1]:
         if name[0] == "2":
             name2 = name[:10]
-            f.write('<a href = "{}">{}</a>\n'.format(name, name2))
+            f.write('<a href = "archive/{}">{}</a>\n'.format(name, name2))
             f.write("<br>\n")
     f.write("</body>")
     sleep(1)
