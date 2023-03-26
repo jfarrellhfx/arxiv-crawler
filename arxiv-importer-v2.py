@@ -13,6 +13,9 @@ class Result:
   url = ""
   abstract = ""
 
+  def write_entry(self):
+      
+
 
 
 new = sections[0]
@@ -38,6 +41,7 @@ authors = [
     "Paolo Glorioso",
     "Sean Hartnoll",
     ]
+
 
 
 for i, entry in enumerate(entries):
