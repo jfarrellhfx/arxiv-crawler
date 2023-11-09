@@ -32,12 +32,12 @@ with open("Archive.html", "w", encoding = "utf-8") as f:
             f.write("<br>\n")
     f.write("</body>")
     sleep(1)
-    
-    # add the footer
-    with open("head.html","r") as g:
-        for line in g.readlines():
-            f.write(line)
+
+# create the new list of papers and add to the file
+os.system("python arxiv-importer-v3.py")
+
+with open("index.html", "a", encoding = "utf-8") as f:
+    f.write("</div>")
+    f.write("</html>")
 
 
-    # create the new list of papers
-    os.system("python arxiv-importer-v3.py")

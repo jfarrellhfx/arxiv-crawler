@@ -18,12 +18,11 @@ def write_entries(file, collection):
                 authors_ = authors_ + ", " + author
                 if authors_[0] == ",":
                     authors_ = authors_[2:]
-
             f.write("<i>{}</i>\n".format(authors_))
-            f.write("<br>\n")
-            f.write("<br>\n")
-
+            
+            f.write("<p>")
             f.write("{}\n".format(result.abstract))
+            f.write("</p>")
             f.write("<br>\n")
             f.write("<br>\n")
     except:
@@ -106,14 +105,12 @@ for i, entry in enumerate(entries):
 
 
 # create a html file to which to put the results
-with open("index.html", "w", encoding="utf-8") as f:
+with open("index.html", "a", encoding="utf-8") as f:
 
     # add the header, which is stored in a different file
     with open("head.html","r") as g:
             for line in g.readlines():
                 f.write(line)
-    f.write("<body>\n")
-    
     f.write("<h2 style = \"margin-top:10px\">Authors:</h2>\n")
     f.write("<hr color = \"#bbb\" style = \"margin-bottom:20px\">\n")
     write_entries(f,search_authors)
