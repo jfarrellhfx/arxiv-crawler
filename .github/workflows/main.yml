@@ -27,4 +27,4 @@ jobs:
 
           git add .
           git commit -m "new day"
-          git push
+          git push origin main
