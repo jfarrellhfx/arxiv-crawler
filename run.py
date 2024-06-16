@@ -33,11 +33,5 @@ with open("Archive.html", "w", encoding = "utf-8") as f:
     f.write("</body>")
     sleep(1)
 
-# create the new list of papers and add to the file
-os.system("python arxiv-importer-v3.py")
-
-with open("index.html", "a", encoding = "utf-8") as f:
-    f.write("</div>")
-    f.write("</html>")
-
-
+    # create the new list of papers
+    os.system("python arxiv-importer-v2.py")
